@@ -1,0 +1,33 @@
+import Link from "next/link"
+import Layout1 from "../../Comps/Layouts/Layout1/Layout"
+import styles from "../../styles/json_fetching.module.css"
+
+const User_Data = ({ userdataprop }) => {
+  return (
+    <div>
+      <h1>All Users</h1>
+      {userdataprop.map((eachuser) => (
+        <Link href={"/json_fetching/" + eachuser.id} key={eachuser.id}>
+          <a className={styles.single_user_data}>
+            <h3>{eachuser.name}</h3>
+          </a>
+        </Link>
+      ))}
+    </div>
+  )
+}
+
+export const getStaticProps = async () => {
+  // https://jsonplaceholder.typicode.com/users
+  const res = await fetch("https://jsonplaceholder.typicode.com/users")
+  //parse json into array
+  const data = await res.json()
+
+  return {
+    props: {
+      userdataprop: data,
+    },
+  }
+}
+User_Data.layout = (page) => <Layout1>{page}</Layout1>
+export default User_Data
