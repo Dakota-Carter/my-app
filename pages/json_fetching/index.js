@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Footer1 from "../../Comps/Layouts/Footers/Footer1"
 import Layout1 from "../../Comps/Layouts/Layout1/Layout"
 import Layout2 from "../../Comps/Layouts/Layout2/Layout"
 import styles from "../../styles/json_fetching.module.css"
@@ -31,8 +32,12 @@ export const getStaticProps = async () => {
   }
 }
 User_Data.layout = (page) => (
-  <Layout1>
-    <Layout2>{page}</Layout2>
-  </Layout1>
+  <>
+    <Layout1>
+      <Layout2>{page}</Layout2>
+    </Layout1>
+    <Footer1 />
+  </>
 )
+
 export default User_Data

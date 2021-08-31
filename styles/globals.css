@@ -36,7 +36,10 @@ a {
   padding: 5px;
   flex-grow: 1;
 }
-
+footer {
+  text-align: center;
+  margin-top: 100px;
+}
 * {
   box-sizing: border-box;
 }
