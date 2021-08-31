@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Layout1 from "../../Comps/Layouts/Layout1/Layout"
+import Layout2 from "../../Comps/Layouts/Layout2/Layout"
 import styles from "../../styles/json_fetching.module.css"
 
 const User_Data = ({ userdataprop }) => {
@@ -29,5 +30,9 @@ export const getStaticProps = async () => {
     },
   }
 }
-User_Data.layout = (page) => <Layout1>{page}</Layout1>
+User_Data.layout = (page) => (
+  <Layout1>
+    <Layout2>{page}</Layout2>
+  </Layout1>
+)
 export default User_Data

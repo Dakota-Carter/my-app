@@ -1,4 +1,5 @@
 import Layout1 from "../../Comps/Layouts/Layout1/Layout"
+import Layout2 from "../../Comps/Layouts/Layout2/Layout"
 
 const UserDetails = ({ dakk }) => {
   return (
@@ -42,5 +43,9 @@ export const getStaticProps = async (ctx) => {
   }
 }
 
-UserDetails.layout = (page) => <Layout1>{page}</Layout1>
+UserDetails.layout = (page) => (
+  <Layout1>
+    <Layout2>{page}</Layout2>
+  </Layout1>
+)
 export default UserDetails
