@@ -1,16 +1,20 @@
 import Footer1 from "../../Comps/Layouts/Footers/Footer1"
 import Layout1 from "../../Comps/Layouts/Layout1/Layout"
 import Layout2 from "../../Comps/Layouts/Layout2/Layout"
+import SSG from "../../Comps/Render_Notify/SSG"
 
 const UserDetails = ({ dakk }) => {
   return (
-    <div>
-      <h1>{dakk.name}</h1>
-      <p>{dakk.username}</p>
-      <p>{dakk.email}</p>
-      <p>{dakk.address.city}</p>
-      <p>{dakk.phone}</p>
-    </div>
+    <>
+      <div>
+        <h1>{dakk.name}</h1>
+        <p>{dakk.username}</p>
+        <p>{dakk.email}</p>
+        <p>{dakk.address.city}</p>
+        <p>{dakk.phone}</p>
+      </div>
+      <SSG />
+    </>
   )
 }
 

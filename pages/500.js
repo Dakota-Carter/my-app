@@ -1,4 +1,5 @@
 import Link from "next/link"
+import SSG from "../Comps/Render_Notify/SSG"
 
 const NotFound = () => {
   return (
@@ -11,6 +12,7 @@ const NotFound = () => {
           <a>Homepage</a>
         </Link>
       </p>
+      <SSG />
     </div>
   )
 }

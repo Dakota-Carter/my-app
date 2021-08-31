@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
+import SSG from "../Comps/Render_Notify/SSG"
 
 //Because default 404 page is 💩
 const NotFound = () => {
@@ -23,6 +24,7 @@ const NotFound = () => {
           <a> Homepage</a>
         </Link>
       </p>
+      <SSG />
     </div>
   )
 }

@@ -18,7 +18,7 @@ const Dropdownmenu = () => {
 
   return (
     <div className={styles.dropdown}>
-      <Dropdownitems>1</Dropdownitems>
+      <Dropdownitems to="/json_fetching">JSON Fetching</Dropdownitems>
       <Dropdownitems>2</Dropdownitems>
     </div>
   )
