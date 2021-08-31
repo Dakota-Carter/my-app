@@ -1,0 +1,67 @@
+/* NavBar */
+.navbar {
+  height: auto;
+  background-color: rgb(66, 66, 66);
+  padding: 8px;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: flex-end;
+  /* After Image: justify-content: space-between; */
+  flex-flow: row wrap;
+  position: relative;
+}
+.navbar_nav {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_button {
+  background-color: rgb(90, 90, 90);
+  border-radius: 50%;
+  padding: 8px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 300ms;
+}
+.icon_button:hover {
+  filter: brightness(1.2);
+}
+.icon_button svg {
+  fill: rgb(185, 185, 185);
+  width: 20px;
+  height: 20px;
+  padding-top: 3px;
+  padding-left: 2px;
+}
+.dropdown {
+  position: absolute;
+  top: 65px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: rgb(56, 56, 56);
+  border: 1px solid #555555;
+  border-radius: 9px;
+  padding: 5px;
+  overflow: hidden;
+}
+.menu_item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 9px;
+  padding: 5px;
+  color: rgb(185, 185, 185);
+  /* 😿  cant use vars in modules 😢 */
+}
